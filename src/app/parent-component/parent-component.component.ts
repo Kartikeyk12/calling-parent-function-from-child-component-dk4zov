@@ -21,7 +21,7 @@ export class ParentComponentComponent implements OnInit {
   ngOnInit() {
     let dataEvery1Min = interval(60000);
     dataEvery1Min.subscribe((data) => {
-      if (data) this.dataService.newNumberSet(5);
+      if (data) this.dataService.newNumberSet(1);
     });
   }
 
