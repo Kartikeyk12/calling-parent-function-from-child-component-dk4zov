@@ -17,6 +17,6 @@ let b1 = [
   { a: 2, b: 'b' },
   { a: 3, c: 'c' },
 ];
-let b2 = [...b1];
-b2.map((x) => (x.a = x.a + 1));
-console.log(b1, b2);
+let b2 = b1.map((x) => ({ ...x, a: x.a + 1 }));
+console.log('B1', b1);
+console.log('B2', b2);
