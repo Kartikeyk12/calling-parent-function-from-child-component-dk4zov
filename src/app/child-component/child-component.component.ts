@@ -17,7 +17,7 @@ export class ChildComponentComponent implements OnInit {
   ngOnInit() {
     this.users = this.arr;
 
-    // this will add data every 1 min
+    // this will add 1 dollor data every 1 min
     this.dataService.newNumGet().subscribe((newData) => {
       this.users.map((i) => {
         i.money += newData;

@@ -19,7 +19,7 @@ export class ParentComponentComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    let dataEvery1Min = interval(60000);
+    let dataEvery1Min = interval(60 * 100);
     dataEvery1Min.subscribe((data) => {
       if (data) this.dataService.newNumberSet(1);
     });
