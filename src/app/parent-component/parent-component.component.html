@@ -1,0 +1,10 @@
+<p>
+  i'm parent component.
+</p>
+
+<div *ngFor="let data of arr">
+  <button style="margin-top:10px" (click)="sendDollor()">Send money {{data.name}}</button><br>
+  <button style="margin-top:10px" (click)="getMoneyFrom(data.name)">Get Money from {{data.name}}</button>
+</div>
+
+  <app-child-component #child [arr]='arr' (parentFun)="parentFun()" ></app-child-component>
